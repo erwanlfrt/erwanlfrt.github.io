@@ -2,8 +2,37 @@ html{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+#welcomeDiv{
+    background-color: #4a4843;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#welcomeText{
+    color: white;
+}
+
+#pageTitle{
+    color : white;
+}
 #main{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+#tpList{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+.divTP{
+    display: flex; 
+    flex-direction: column; 
+    width: 100%;
+    align-items : center;
+    border : 2px solid black;
+    
 }

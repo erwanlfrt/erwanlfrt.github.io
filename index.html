@@ -7,11 +7,28 @@
     </head>
     <body>
         <div id="main">
-            <p>Bienvenue, ce site web contient l'ensemble de mes supers productions !</p>
+            <div id="welcomeDiv">
+                <div style="display: flex; flex-direction: row; align-items: center;"><p id="pageTitle">Techno web <p style="color : #1ce007; font-size: 30px;"> / erwanlfrt</p></p></div>
+                
+                <p id="welcomeText">Bienvenue, ce site web contient l'ensemble de mes supers productions !</p>
+            </div>
+            
 
             <p>Liste des TP</p>
             <div id="tpList">
-                <p><a href="tp1/index.html">TP1</a></p>
+                <div class="divTP" id="tpHTML">
+                    <p><a href="tp/html/index.html">TP HTML</a></p>
+                </div>
+                <div  class="divTP" id="tpCSS">
+                    <p><a href="tp/css/index.html">TP CSS</a></p>
+                </div>
+                <div class="divTP" id="tpJS">
+                    <p><a href="tp/js/index.html">TP JS</a></p>
+                </div>
+                <div  class="divTP" id="tpVue">
+                    <p><a href="tp/Vue/index.html">TP Vue</a></p>
+                </div>
+                
             </div>
         </div>
         

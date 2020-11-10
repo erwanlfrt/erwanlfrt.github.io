@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+
+    </head>
+    <body>
+        <canvas id="theCanvas"></canvas>
+    </body>
+    
+
+    <script>
+        theCanvas = document.getElementById("theCanvas")
+        if (theCanvas.getContext) {
+            var ctx = theCanvas.getContext('2d');
+            ctx.canvas.width  = window.innerWidth;
+            ctx.canvas.height = window.innerHeight;
+            ctx.fillStyle = "#FF0000";
+            //ctx.fillRect(25, 25, 700,100);
+
+        }
+
+        var first = false
+        function moveSquare(){
+                    var x = 25
+                    var goToRight = true
+                    var i = 0
+                    
+                    var inter = setInterval(() =>{
+                        theCanvas = document.getElementById("theCanvas")
+                        if (theCanvas.getContext) {
+                            if(goToRight) x = x +10
+                            else x = x + 10;
+                            var ctx = theCanvas.getContext('2d');
+                            if(x > window.innerWidth) goToRight = false
+                            else if(x < 0) goToRight = true
+                            ctx.clearRect(x-100, 0, window.innerWidth, 200);
+                            ctx.fillRect(x, 25, 50, 50);
+                        
+                            
+                            i ++;
+                            if(i>1000){
+                                clearInterval(inter)
+                                if(!first)  alert("Assez joué")
+                                
+                                first = true
+                            }
+                        }
+                    }, 10)
+        }
+
+        var j = 0
+        function loop(){
+                if(j < 10){
+                    setTimeout(function(){
+                        j++;
+                        moveSquare()
+                        loop();
+                 }, 1000)
+                }
+                
+        }
+        
+
+        
+        window.addEventListener("load", (event) =>{
+            setTimeout(() =>{
+
+                loop()
+                
+
+                
+            }, 4000)
+            
+            
+        });
+    </script>
+</html>

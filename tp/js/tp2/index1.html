@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+
+    </head>
+    <body>
+        <p id="bip"></p>
+    </body>
+    
+
+    <script>
+        window.addEventListener("load", (event) =>{
+            i = 10
+            var inter = setInterval(() =>{
+                if(i>=0){
+                    bip = document.getElementById("bip")
+                    bip.innerHTML = i-- + " secondes"
+                }
+                else{
+                    clearInterval(inter)
+                }
+            }, 1000)
+            
+        });
+    </script>
+</html>

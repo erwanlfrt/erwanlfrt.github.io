@@ -2,27 +2,40 @@
 <html>
     <head>
         <title>My website</title>
-        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+        <link rel = "stylesheet" type = "text/css" href = "../../../style.css" />
 
     </head>
     <body>
-        <p id="bip"></p>
-    </body>
-    
-
-    <script>
-        window.addEventListener("load", (event) =>{
-            i = 10
-            var inter = setInterval(() =>{
-                if(i>=0){
-                    bip = document.getElementById("bip")
-                    bip.innerHTML = i-- + " secondes"
-                }
-                else{
-                    clearInterval(inter)
-                }
-            }, 1000)
+        <div id="main">
+            <div id="welcomeDiv">
+                <div style="display: flex; flex-direction: row; align-items: center;"><p id="pageTitle"><p style="color : #1ce007; font-size: 30px;">JS</p></p></div>
+                
+                <p id="welcomeText">Bienvenue, ce site web contient l'ensemble de mes supers productions JS !</p>
+            </div>
             
-        });
-    </script>
+
+            <p>Liste des TP</p>
+            <div id="tpList">
+
+                <div class="divTP" id="tpJS">
+                    <p><a href="index1.html">Exercice 1</a></p>
+                </div>
+                <div class="divTP" id="tpJS">
+                    <p><a href="index2.html">Exercice 2</a></p>
+                </div>
+                <div class="divTP" id="tpJS">
+                    <p><a href="index3.html">Exercice 3</a></p>
+                </div>
+                <div class="divTP" id="tpJS">
+                    <p><a href="index4.html">Exercice 4</a></p>
+                </div>
+                <div class="divTP" id="tpJS">
+                    <p><a href="index5.html">Exercice 5</a></p>
+                </div>
+
+                
+            </div>
+        </div>
+        
+    </body>
 </html>

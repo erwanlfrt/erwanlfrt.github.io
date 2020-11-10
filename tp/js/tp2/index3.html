@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+
+    </head>
+    <body>
+        <canvas id="theCanvas"></canvas>
+    </body>
+    
+
+    <script>
+        theCanvas = document.getElementById("theCanvas")
+        if (theCanvas.getContext) {
+            var ctx = theCanvas.getContext('2d');
+            ctx.canvas.width  = window.innerWidth;
+            ctx.canvas.height = window.innerHeight;
+            ctx.fillStyle = "#FF0000";
+            //ctx.fillRect(25, 25, 700,100);
+
+        }
+
+        
+        window.addEventListener("load", (event) =>{
+            setTimeout(() =>{
+                x = 25
+                goToRight = true
+                i = 0
+                var inter = setInterval(() =>{
+                        theCanvas = document.getElementById("theCanvas")
+                        if (theCanvas.getContext) {
+                            if(goToRight) x = x +10
+                            else x = x - 10;
+                            var ctx = theCanvas.getContext('2d');
+                            if(x > window.innerWidth) goToRight = false
+                            else if(x < 0) goToRight = true
+                            ctx.clearRect(0, 0, theCanvas.width, 200);
+                            ctx.fillRect(x, 25, 100, 100);
+                            i ++;
+                            if(i>1000){
+                                clearInterval(inter)
+                                alert("Assez joué")
+                            }
+                        }
+                }, 10)
+            }, 2000)
+            
+            
+        });
+    </script>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+        <link rel = "stylesheet" type = "text/css" href = "style.css" />
+
+    </head>
+    <body>
+        <canvas id="theCanvas"></canvas>
+    </body>
+    
+
+    <script>
+        theCanvas = document.getElementById("theCanvas")
+        if (theCanvas.getContext) {
+            var ctx = theCanvas.getContext('2d');
+            ctx.fillRect(25, 25, 100, 100);
+            ctx.clearRect(45, 45, 60, 60);
+            ctx.strokeRect(50, 50, 50, 50);
+
+        }
+        window.addEventListener("load", (event) =>{
+            i = 11
+            var inter = setInterval(() =>{
+                if(i>=0){
+                    theCanvas = document.getElementById("theCanvas")
+                    theCanvas.width = theCanvas.width + 10;
+                }
+                else{
+                    clearInterval(inter)
+                }
+            }, 10)
+            
+        });
+    </script>
+</html>

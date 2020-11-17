@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+
+    </head>
+    <body>
+
+        <canvas id="animatedElem"></canvas>
+        
+
+    </body>
+    <script>
+
+
+        theCanvas = document.getElementById("animatedElem");
+        var ctx = theCanvas.getContext('2d');
+        ctx.canvas.width  = window.innerWidth;
+        ctx.canvas.height = window.innerHeight;
+
+
+        function drawGame(index){
+            theCanvas = document.getElementById("animatedElem");
+            var ctx = theCanvas.getContext('2d');
+
+            var img = new Image();
+            img.addEventListener('load', function() {
+                ctx.clearRect(0, 0, 50, 50);
+                ctx.drawImage(img, 44*i, 0, 44,40,0,0,44,40 );
+            }, false);
+            img.src="img/coin-sprite-animation-sprite-sheet.png";
+
+        }
+        var i = 0 ;
+
+
+        var mainloop = function() {
+            //updateGame();
+            drawGame(i);
+            i++;
+            if( i > 9){
+                i = 0;
+            }
+        };
+
+
+        var animFrame = window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame    ||
+                window.oRequestAnimationFrame      ||
+                window.msRequestAnimationFrame     ||
+                null ;
+
+        var recursiveAnim = function() {
+            mainloop();
+            animFrame( recursiveAnim );
+        };
+
+        // start the mainloop
+        animFrame( recursiveAnim );
+
+        
+
+    </script>
+</html>

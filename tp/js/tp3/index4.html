@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+
+    </head>
+    <body>
+
+        <canvas id="animatedElem"></canvas>
+        
+
+    </body>
+    <script>
+        var start = null;
+
+        theCanvas = document.getElementById("animatedElem");
+        var ctx = theCanvas.getContext('2d');
+        ctx.canvas.width  = window.innerWidth;
+        ctx.canvas.height = window.innerHeight;
+
+        var left = 0;
+        
+        function moveCanvas(timestamp){
+            var progress;
+            if (start === null) start = timestamp;
+            progress = timestamp - start;
+            theCanvas = document.getElementById("animatedElem")
+            var ctx = theCanvas.getContext('2d');
+                
+            ctx.fillStyle = "#FF0000";
+
+
+            while(left < window.innerWidth-100){
+                
+                left +=1 ;
+                ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+                ctx.fillRect(left, 25, 50, 50);
+                
+                if(progress < 2000){
+                    requestAnimationFrame(moveCanvas);
+                }
+            }
+
+            
+            
+        }
+        requestAnimationFrame(moveCanvas);
+
+
+        
+
+    </script>
+</html>

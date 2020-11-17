@@ -36,3 +36,12 @@ html{
     border : 2px solid black;
     
 }
+
+@media screen and (max-device-width: 250px){
+    html{
+        font-size: 80%;
+    }
+    #main{
+        display: block;
+    }
+}

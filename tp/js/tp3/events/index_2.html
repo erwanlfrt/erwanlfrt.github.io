@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Events </title>
+    </head>
+    <body>
+      <canvas id="animatedElem"></canvas>
+    </body>
+<script>
+
+  theCanvas = document.getElementById("animatedElem");
+  var ctx = theCanvas.getContext('2d');
+  ctx.canvas.width  = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+
+
+  function drawGame(i, j, x , y){
+      console.log("y = "+y)
+      console.log("innerWidth = "+window.innerWidth)
+      console.log("innerHeight = "+window.innerHeight)
+      theCanvas = document.getElementById("animatedElem");
+      var ctx = theCanvas.getContext('2d');
+
+      var img = new Image();
+      img.addEventListener('load', function() {
+          ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+          ctx.drawImage(img, 128*i, 128*j, 128,128,y,x,128,128 );
+      }, false);
+      img.src="hero_walk_cycle_spritesheet_by_mrnoobtastic-d3defej.png";
+
+  }
+  var i = 0 ;
+  var j = 0 ; 
+  var x = 100 ; 
+  var y = 100 ;
+
+
+  var mainloop = function() {
+
+    window.addEventListener("keydown", function (event) {
+      if (event.defaultPrevented) {
+        return; // Should do nothing if the key event was already consumed.
+      }
+      i++;
+      if(i>3) i = 0;
+
+      
+      switch (event.key) {
+        case "ArrowDown":
+          if(x+10 < window.innerHeight-100) x = x+10;
+          j = 2
+          break;
+        case "ArrowUp":
+        if(x-10 > 0) x = x-10;
+          j = 3
+          break;
+        case "ArrowLeft":
+          if(y-10>0) y = y -10;
+          j = 0
+          break;
+        case "ArrowRight":
+          if(y +10 <window.innerWidth-100) y = y +10;
+          j = 1
+          break;
+        default:
+          //j = 0;
+          return; // Quit when this doesn't handle the key event.
+      }
+      drawGame(i, j, x, y);
+
+      // Consume the event for suppressing "double action".
+      event.preventDefault();
+     }, true);
+    };
+    mainloop();
+
+
+    </script>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Events </title>
+    </head>
+    <body>
+      <canvas id="animatedElem"></canvas>
+    </body>
+<script>
+
+  theCanvas = document.getElementById("animatedElem");
+  var ctx = theCanvas.getContext('2d');
+  ctx.canvas.width  = window.innerWidth;
+  ctx.canvas.height = window.innerHeight;
+
+
+  function drawGame(i, x , y, xGoal, yGoal){
+
+      
+      var j = 0;
+
+      if(x-64<xGoal){
+          j = 1;
+          if(xGoal-x -64< 3){
+            x = xGoal-64
+
+          }
+          else{
+            x = x +3;
+          }
+          
+          
+
+      }
+      else if(x+64 >xGoal){
+          j = 0;
+          if(x-xGoal+64 < 3){
+              x = xGoal+64
+          }
+          else{
+            x = x -3;
+          }
+          
+      }
+      else if(x-64 == xGoal || x+64 == xGoal){
+        if(y-64<yGoal){
+            j = 3
+            if(yGoal-y-64< 3){
+                y = yGoal-64
+            }
+            else{
+                y = y +3
+            }
+            
+        }
+        else if(y+64>yGoal){
+            j = 2
+            if(y-yGoal +64< 3){
+                y = yGoal+64
+            }
+            else{
+                y = y -3
+            }
+            
+        }
+      }
+
+      if(i<3){
+          i++;
+      }
+      else{
+          i= 0;
+      }
+
+
+      theCanvas = document.getElementById("animatedElem");
+      var ctx = theCanvas.getContext('2d');
+
+      var img = new Image();
+      img.addEventListener('load', function() {
+          ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+          ctx.drawImage(img, 128*i, 128*j, 128,128,x,y,128,128 );
+      }, false);
+      img.src="hero_walk_cycle_spritesheet_by_mrnoobtastic-d3defej.png";
+      return [i,x,y];
+  }
+  var i = 0 ;
+  var j = 0 ; 
+  var x = 100 ; 
+  var y = 100 ;
+  var goToX = 100;
+  var goToY = 100;
+
+
+  var mainloop = function() {
+
+    window.addEventListener("mousedown", function (event) {
+      if (event.defaultPrevented) {
+        return; // Should do nothing if the key event was already consumed.
+      }
+      goToX = event.clientX;
+      goToY = event.clientY;
+
+      var i = 0
+      var cpt = 0
+      while((x-64 != goToX || x+64 != goToX || y-64!=goToY || y +64 != goToY) && cpt < 1500  ){
+        ret = drawGame(i, x, y, goToX, goToY);
+        i = ret[0];
+        x = ret[1];
+        y = ret[2];
+        cpt ++;
+      }
+      
+
+      // Consume the event for suppressing "double action".
+      event.preventDefault();
+     }, true);
+    };
+    mainloop();
+
+
+    </script>

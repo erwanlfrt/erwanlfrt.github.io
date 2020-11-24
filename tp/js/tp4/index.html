@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My website</title>
+
+    </head>
+    <body>
+
+        <canvas id="animatedElem"></canvas>
+        
+
+    </body>
+    <script>
+
+
+        theCanvas = document.getElementById("animatedElem");
+        var ctx = theCanvas.getContext('2d');
+        ctx.canvas.width  = window.innerWidth;
+        ctx.canvas.height = window.innerHeight;
+
+
+        function drawGame(index, x ,y){
+            theCanvas = document.getElementById("animatedElem");
+            var ctx = theCanvas.getContext('2d');
+
+            var img = new Image();
+            img.addEventListener('load', function() {
+                ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+                ctx.drawImage(img, 256*i, 252*j, 256,252,x,y,256,252 );
+            }, false);
+            img.src="other_explosion.png";
+
+        }
+        var i = 0 ;
+        var j = 0;
+
+
+        var mainloop = function(x,y) {
+            
+            //updateGame();
+            drawGame(i,x,y);
+            i++;
+            if( i > 7){
+                i = 0;
+                j++;
+                
+            }
+            if(j > 3){
+                j = 0
+                i = 0
+            }
+        };
+
+
+        var animFrame = window.requestAnimationFrame ||
+                window.webkitRequestAnimationFrame ||
+                window.mozRequestAnimationFrame    ||
+                window.oRequestAnimationFrame      ||
+                window.msRequestAnimationFrame     ||
+                null ;
+
+        var recursiveAnim = (cpt,x,y) => {
+            
+            if(cpt > 1){
+                mainloop(x,y);
+                animFrame( function(){
+                    recursiveAnim(cpt - 1,x,y) 
+                });
+            }
+            
+        };
+
+        // start the mainloop
+        document.addEventListener('keyup', event => {
+                x = Math.round(Math.random()*(window.innerWidth-256));
+                y = Math.round(Math.random()*(window.innerHeight-256));
+                if (event.code === 'Space') {
+                    animFrame( recursiveAnim(33,x,y) );
+                }
+        })
+        
+
+        
+
+    </script>
+</html>

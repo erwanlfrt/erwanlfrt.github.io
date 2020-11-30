@@ -29,6 +29,7 @@ self.addEventListener('install', function(event) {
           caches.open('v1').then(function (cache) {
             cache.put(event.request, responseClone);
           });
+          console.log("res = "+JSON.stringify(response.text()))
           return response.text();
         }).catch(function () {
           return caches.match('https://cors-anywhere.herokuapp.com/https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9EYlGR3a.shu');

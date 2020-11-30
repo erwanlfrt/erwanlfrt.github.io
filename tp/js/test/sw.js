@@ -32,7 +32,6 @@ self.addEventListener('install', function(event) {
           // and serve second one
           console.log("on passe dans le fetch")
           //console.log("response = "+response.text())
-          //response.text().then((text) =>{console.log("text = "+text)})
           let responseClone = response.clone();
           
           caches.open('v1').then(function (cache) {

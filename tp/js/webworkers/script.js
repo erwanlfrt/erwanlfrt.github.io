@@ -1,5 +1,3 @@
-this.document.body.style.backgroundColor = "blue"
-
 this.addEventListener('fetch', function(event) {
     event.respondWith(
       caches.match(event.request).catch(function() {

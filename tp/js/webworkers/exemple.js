@@ -2,6 +2,7 @@
 self.addEventListener('install', function(event) {
     event.waitUntil(
       caches.open('v1').then(function(cache) {
+        console.log("on build")
         return cache.addAll([
           'https://cors-anywhere.herokuapp.com/https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9EYlGR3a.shu',
         ]);

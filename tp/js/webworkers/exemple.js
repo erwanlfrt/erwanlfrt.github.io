@@ -17,6 +17,7 @@ this.addEventListener("install", (event) =>{
     );
 });
 
+console.log("holly god");
 this.addEventListener("fetch", (event) =>{
     console.log("fetched");
     event.respondWith(

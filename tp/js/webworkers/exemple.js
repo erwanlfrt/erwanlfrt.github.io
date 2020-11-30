@@ -26,11 +26,5 @@ this.addEventListener("fetch", (event) =>{
         caches.match(event.request).then((response) =>{
             return response.text() || fetch(event.request)
         })
-        .then(function(response){
-            return response.text();
-        })
-        .then(function(text){
-            console.log(text);
-        })
     );
 });

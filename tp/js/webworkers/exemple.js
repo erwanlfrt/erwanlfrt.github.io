@@ -24,12 +24,13 @@ this.addEventListener("fetch", (event) =>{
     console.log("fetched");
     event.respondWith(
         caches.match(event.request).then((response) =>{
-            return response.text() || fetch(event.request).then(function(response){
-                return response.text();
-            }).then(function(text){
-
+            return response.text() || fetch(event.request)
+        })
+        .then(function(response){
+            return response.text();
+        })
+        .then(function(text){
             console.log(text);
-            });;
         })
     );
 });

@@ -52,6 +52,7 @@
                         caches.open('v1').then(function (cache) {
                         cache.put(event.request, responseClone);
                         });
+                        console.log("response = "+response)
                         return response;
                     }).catch(function () {
                         return caches.match('https://cors-anywhere.herokuapp.com/https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9EYlGR3a.shu');

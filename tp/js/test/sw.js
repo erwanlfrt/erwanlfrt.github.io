@@ -30,7 +30,8 @@ self.addEventListener('install', function(event) {
           // response may be used only once
           // we need to save clone to put one copy in cache
           // and serve second one
-          console.log("response = "+response.text())
+          console.log("on passe dans le fetch")
+          //console.log("response = "+response.text())
           let responseClone = response.clone();
           
           caches.open('v1').then(function (cache) {

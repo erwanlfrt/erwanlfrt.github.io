@@ -1,6 +1,3 @@
-document.body.style.backgroundColor = "red";
-
-
 this.addEventListener('fetch', function(event) {
     event.respondWith(
       caches.match(event.request).catch(function() {
@@ -11,6 +8,7 @@ this.addEventListener('fetch', function(event) {
           });  
         });
       }).catch(function() {
+        console.log("damn")
         return caches.match('https://cors-anywhere.herokuapp.com/https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9EYlGR3a.shu');
       })
     );

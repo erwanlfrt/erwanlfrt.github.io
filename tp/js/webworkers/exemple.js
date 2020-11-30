@@ -8,6 +8,7 @@ let cacheResources = [
     "/tp/js/webworkers/",
     noCorsUrl + calUrl
 ]
+console.log("holly god");
 
 this.addEventListener("install", (event) =>{
     event.waitUntil(
@@ -17,7 +18,7 @@ this.addEventListener("install", (event) =>{
     );
 });
 
-console.log("holly god");
+
 this.addEventListener("fetch", (event) =>{
     console.log("fetched");
     event.respondWith(

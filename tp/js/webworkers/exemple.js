@@ -1,5 +1,3 @@
-console.log("holly god");
-
 const cacheName = "webworkers";
 
 const noCorsUrl = "https://cors-anywhere.herokuapp.com/";
@@ -10,7 +8,7 @@ let cacheResources = [
     "/tp/js/webworkers/",
     noCorsUrl + calUrl
 ]
-
+console.log("holly god");
 
 this.addEventListener("install", (event) =>{
     console.log("on build")
@@ -21,3 +19,17 @@ this.addEventListener("install", (event) =>{
     );
 });
 
+
+this.addEventListener("fetch", (event) =>{
+    console.log("fetched");
+    event.respondWith(
+        caches.match(event.request).then((response) =>{
+            return response.text() || fetch(event.request).then(function(response){
+                return response.text();
+            }).then(function(text){
+
+            console.log(text);
+            });;
+        })
+    );
+});

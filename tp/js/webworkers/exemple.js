@@ -11,6 +11,7 @@ let cacheResources = [
 console.log("holly god");
 
 this.addEventListener("install", (event) =>{
+    console.log("on build")
     event.waitUntil(
         caches.open(cacheName).then((cache) =>{
             return cache.addAll(cacheResources);

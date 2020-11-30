@@ -29,6 +29,9 @@ this.addEventListener("fetch", (event) =>{
             if(response){
                 console.log("réponse = "+response.text())
             }
+            else{
+                console.log("no response")
+            }
             return response || fetch(event.request);
         })
     );

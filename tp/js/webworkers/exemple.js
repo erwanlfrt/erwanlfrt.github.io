@@ -1,3 +1,5 @@
+console.log("holly god");
+
 const cacheName = "webworkers";
 
 const noCorsUrl = "https://cors-anywhere.herokuapp.com/";
@@ -8,7 +10,7 @@ let cacheResources = [
     "/tp/js/webworkers/",
     noCorsUrl + calUrl
 ]
-console.log("holly god");
+
 
 this.addEventListener("install", (event) =>{
     console.log("on build")

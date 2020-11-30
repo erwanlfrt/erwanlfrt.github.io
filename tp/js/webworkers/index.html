@@ -15,6 +15,7 @@
             event.waitUntil(
             caches.open("mon-site-cache-v1").then(function(cache) {
                 // On met en cache une liste d'URLs qui sont la fondation de notre app.
+                console.log("ok")
                 return cache.addAll([
                     "https://cors-anywhere.herokuapp.com/https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9EYlGR3a.shu",
                 ]);

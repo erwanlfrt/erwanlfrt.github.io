@@ -7,7 +7,7 @@ const noCorsUrl = "https://cors-anywhere.herokuapp.com/";
 let calUrl = "https://planning.univ-rennes1.fr/jsp/custom/modules/plannings/9EYlGR3a.shu";
 
 let cacheResources = [
-    "/webworkers/",
+    "/tp/js/webworkers/",
     noCorsUrl + calUrl
 ]
 

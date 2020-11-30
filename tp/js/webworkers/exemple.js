@@ -23,7 +23,7 @@ this.addEventListener("fetch", (event) =>{
         caches.match(event.request).then((response) =>{
             return response.text() || fetch(event.request);
         }).then(function(text){
-
+            console.log("les copains je suis là")
             //console.log(text);
             var jCalData = ICAL.parse(text);
             let result = []

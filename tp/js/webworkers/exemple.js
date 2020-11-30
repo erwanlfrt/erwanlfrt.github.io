@@ -24,10 +24,7 @@ this.addEventListener("fetch", (event) =>{
     console.log("fetched");
     event.respondWith(
         caches.match(event.request).then((response) =>{
-            if(response){
-                return response;
-            }
-           fetch(event.request);
+            return response || fetch(event.request);
         })
     );
 });

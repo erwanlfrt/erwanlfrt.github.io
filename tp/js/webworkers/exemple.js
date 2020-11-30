@@ -25,13 +25,6 @@ this.addEventListener("fetch", (event) =>{
     event.respondWith(
         caches.match(event.request).then((response) =>{
             return response.text() || fetch(event.request);
-        }).then(function(text){
-            console.log("les copains je suis là")
-            //console.log(text);
-            var jCalData = ICAL.parse(text);
-            let result = []
-            let events = jCalData[1][2];
-            events.forEach(e => result.push(flattenEvent(e)));
-            console.log(events);
-    )
-})
+        })
+    );
+});

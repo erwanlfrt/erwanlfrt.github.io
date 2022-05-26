@@ -1,25 +1,56 @@
 <!doctype html>
 <html>
   <head>
-    <title>Our Funky HTML Page</title>
+    <title>Portfolio @erwanlfrt</title>
     <meta name="description" content="Our first page">
     <meta name="keywords" content="html tutorial template">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div id="pf-header">
-      <img src="" alt="pp">
-      <h1>Erwan Le Forestier</h1>
+      <img src=https://avatars.githubusercontent.com/u/66443231?v=4" alt="pp" id="pf-pp">
+      <h1 id="pf-name">Erwan Le Forestier</h1>
       <h3>Rennes, France</h3>
     </div>
     <div id="pf-body">
       <div class="pf-section">
         <div class="pf-section-header">
           <div class="pf-stroke"></div>
-          <span class="pf-section-title">My projects</span>
+          <h1 class="pf-section-title">My projects</h1>
           <div class="pf-stroke"></div>
         </div>
-        <div class="pf-section-core">
-          Hey core !
+        <div class="pf-section-core pf-projects-list">
+          <div class="pf-project">
+            <!-- <img src="/assets/logo/youtongue.svg" alt="logo" class="pf-project-logo"> -->
+            <object data="assets/logo/youtongue.svg" class="pf-project-logo"> </object>
+            <span class="pf-project-title">YouTongue</span>
+            <span class="pf-project-description">- Querying YouTube videos by subtitles</span>
+          </div>
+        </div>
+      </div>
+      <div class="pf-section">
+        <div class="pf-section-header">
+          <div class="pf-stroke"></div>
+          <h1 class="pf-section-title">Contact</h1>
+          <div class="pf-stroke"></div>
+        </div>
+        <div class="pf-section-core pf-contact-list">
+          <a href="mailto:leforestiererwan@gmail.com" class="pf-contact" target="_blank">
+            <object data="assets/icons/mail.svg" class="pf-contact-icon"></object>
+            <span class="pf-contact-info">leforestiererwan@gmail.com</span>
+          </a>
+          <a href="tel:33783613196" class="pf-contact">
+            <object data="assets/icons/phone.svg" class="pf-contact-icon"></object>
+            <span class="pf-contact-info">(+33) 7 83 61 31 96</span>
+          </a>
+          <a href="https://github.com/erwanlfrt" class="pf-contact" target="_blank">
+            <object data="assets/icons/github.svg" class="pf-contact-icon"></object>
+            <span class="pf-contact-info">@erwanlfrt</span>
+          </a>
+          <a href="https://www.linkedin.com/in/erwanlfrt/" class="pf-contact" target="_blank">
+            <object data="assets/icons/linkedin.svg" class="pf-contact-icon"></object>
+            <span class="pf-contact-info">@erwanlfrt</span>
+          </a>
         </div>
       </div>
     </div>

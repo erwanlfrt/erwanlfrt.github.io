@@ -1,0 +1,147 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("assets/fonts/Roboto/roboto-v29-latin-regular.woff") format("woff"),
+  url("assets/fonts//Roboto/roboto-v29-latin-regular.woff2") format("woff2")
+ }
+
+body {
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#pf-header {
+  background-color: #425250;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1% 0;
+  width: 100%;
+}
+#pf-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+#pf-pp {
+  width: 140px;
+  height: auto;
+  border-radius: 100%;
+}
+
+h1 {
+  margin: 1%;
+}
+
+h3 {
+  margin: 0;
+  font-weight: normal;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+
+/** SECTIONS **/
+
+.pf-section {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2% 0;
+}
+
+
+.pf-section-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.pf-stroke {
+  flex-grow: 1;
+  height: 1px;
+  background-color: black;
+}
+
+.pf-section-title {
+  font-size: 40px;
+  margin: 0 3%;
+}
+
+.pf-section-core {
+  width: 100%;
+}
+
+.pf-projects-list {
+  margin-top: 1%;
+}
+
+/** PROJECT **/
+
+.pf-project {
+  background-color: #f0f0f0 ;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 95%;
+  height: 75px;
+  padding: 0 2.5%;
+  border-radius: 5px;
+  margin: 1.5% 0;
+}
+
+.pf-project-logo {
+  width: 60px;
+  height: auto;
+}
+
+.pf-project-title {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 2%;
+}
+
+.pf-project-description {
+  color: #727272;
+}
+
+/** **/
+.pf-contact-list {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pf-contact {
+  /* background-color: green; */
+  display: flex;
+  align-items:  center;
+  height: 75px;
+  width: 90%;
+  border-radius: 5px;
+  transition: all 0.35s ease-in;
+}
+
+.pf-contact:hover {
+  background-color: #f0f0f0;
+}
+
+.pf-contact-icon {
+  width: 30px;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 2%;
+}

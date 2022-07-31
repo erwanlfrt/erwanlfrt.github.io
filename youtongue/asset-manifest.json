@@ -1,18 +1,21 @@
 {
   "files": {
-    "main.css": "/youtongue/static/css/main.69898fc0.chunk.css",
-    "main.js": "/youtongue/static/js/main.4271343e.chunk.js",
-    "main.js.map": "/youtongue/static/js/main.4271343e.chunk.js.map",
+    "main.css": "/youtongue/static/css/main.c426084d.chunk.css",
+    "main.js": "/youtongue/static/js/main.e29c049a.chunk.js",
+    "main.js.map": "/youtongue/static/js/main.e29c049a.chunk.js.map",
     "runtime-main.js": "/youtongue/static/js/runtime-main.7a57b76b.js",
     "runtime-main.js.map": "/youtongue/static/js/runtime-main.7a57b76b.js.map",
-    "static/js/2.d812fec3.chunk.js": "/youtongue/static/js/2.d812fec3.chunk.js",
-    "static/js/2.d812fec3.chunk.js.map": "/youtongue/static/js/2.d812fec3.chunk.js.map",
+    "static/js/2.12c27062.chunk.js": "/youtongue/static/js/2.12c27062.chunk.js",
+    "static/js/2.12c27062.chunk.js.map": "/youtongue/static/js/2.12c27062.chunk.js.map",
     "index.html": "/youtongue/index.html",
-    "static/css/main.69898fc0.chunk.css.map": "/youtongue/static/css/main.69898fc0.chunk.css.map",
-    "static/js/2.d812fec3.chunk.js.LICENSE.txt": "/youtongue/static/js/2.d812fec3.chunk.js.LICENSE.txt",
-    "static/media/add_circle_outline_black_24dp.376e9b6a.svg": "/youtongue/static/media/add_circle_outline_black_24dp.376e9b6a.svg",
+    "static/css/main.c426084d.chunk.css.map": "/youtongue/static/css/main.c426084d.chunk.css.map",
+    "static/js/2.12c27062.chunk.js.LICENSE.txt": "/youtongue/static/js/2.12c27062.chunk.js.LICENSE.txt",
+    "static/media/arrow-down.2e0eb198.svg": "/youtongue/static/media/arrow-down.2e0eb198.svg",
+    "static/media/arrow-left.25550fca.svg": "/youtongue/static/media/arrow-left.25550fca.svg",
+    "static/media/arrow-right.7b13c9ac.svg": "/youtongue/static/media/arrow-right.7b13c9ac.svg",
     "static/media/check_circle_outline_black_24dp.f79b114b.svg": "/youtongue/static/media/check_circle_outline_black_24dp.f79b114b.svg",
     "static/media/close_black_24dp.244b6687.svg": "/youtongue/static/media/close_black_24dp.244b6687.svg",
+    "static/media/close_white.604f17ae.svg": "/youtongue/static/media/close_white.604f17ae.svg",
     "static/media/app.css": "/youtongue/static/media/roboto-v29-latin-regular.9b78ea3b.woff",
     "static/media/search_black_24dp.6c95e853.svg": "/youtongue/static/media/search_black_24dp.6c95e853.svg",
     "static/media/youtongue.2c5772aa.svg": "/youtongue/static/media/youtongue.2c5772aa.svg",
@@ -20,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.7a57b76b.js",
-    "static/js/2.d812fec3.chunk.js",
-    "static/css/main.69898fc0.chunk.css",
-    "static/js/main.4271343e.chunk.js"
+    "static/js/2.12c27062.chunk.js",
+    "static/css/main.c426084d.chunk.css",
+    "static/js/main.e29c049a.chunk.js"
   ]
 }

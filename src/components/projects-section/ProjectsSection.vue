@@ -1,33 +1,23 @@
 <script setup lang="ts">
 import CustomTitle from '@/components/custom-title/CustomTitle.vue';
+import ProjectTile from '@/components/project-tile/ProjectTile.vue';
 
 const projects = [
-  {
-    title: 'YouTongue',
-    description: 'Search YouTube videos according to subtitles.',
-    background: '',
-    logo: '',
-    tags: []
-  },
-  {
-    title: 'Boussole',
-    description: 'Search YouTube videos according to subtitles.',
-    background: '',
-    logo: '',
-    tags: []
-  },
-  {
-    title: 'Sweetch',
-    description: 'Search YouTube videos according to subtitles.',
-    background: '',
-    logo: '',
-    tags: []
-  }
+  'youtongue',
+  'boussole',
+  'sweetch'
 ]
 </script>
 
 <template>
   <div class="projects">
-    <custom-title title="Projects"/>
+    <custom-title title="My projects"/>
+    <div class="project-list">
+      <project-tile 
+        v-for="(project, index) in projects" 
+        :key="index" 
+        :project="project"
+      />
+    </div>
   </div>
 </template>

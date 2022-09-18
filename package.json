@@ -6,13 +6,14 @@
   "author": "",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "vue-cli-service build && cp -r boussole youtongue cv dist/",
     "lint": "vue-cli-service lint",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "main": "index.js",
   "dependencies": {
     "core-js": "^3.8.3",
+    "pinia": "^2.0.22",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

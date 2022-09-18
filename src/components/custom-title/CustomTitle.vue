@@ -11,13 +11,14 @@
 
 <style scoped lang="scss">
   .custom-title {
+    font-size: 23px;
     position: relative;
     &::after {
       content: '';
-      width: 25px;
-      border-bottom: solid 5px #09A17D;
+      width: 20px;
+      border-bottom: solid 4px #09A17D;
       position: absolute;
-      bottom: -3px;
+      bottom: -4px;
       left: 0;
     }
   }

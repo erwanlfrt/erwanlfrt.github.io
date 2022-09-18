@@ -17,13 +17,28 @@ import CvSection from '@/components/cv-section/CvSection.vue';
 
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
   .home {
     display: flex;
     justify-content: center;
     width: 60%;
-    .left {
-      margin-right: 20px;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    flex-wrap: wrap-reverse;
+
+
+    .right {
+      width: 425px;
+      margin: 0 5px;
+      p {
+        color: #6b6b6b;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1400px) {
+    .home {
+      width: 100%;
     }
   }
 </style>

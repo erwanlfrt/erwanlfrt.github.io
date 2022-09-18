@@ -1,17 +1,17 @@
 
 <script setup lang="ts">
 import { ref } from "vue"
-
+import { useLanguageStore } from "@/store/LanguageStore";
 const languages = [
   {
-    name: 'french',
+    name: 'fr',
     icon: 'french.svg'
   },
   {
-    name: 'english',
+    name: 'en',
     icon: 'english.svg'
   }, {
-    name: 'german',
+    name: 'de',
     icon: 'german.svg'
   }
 ]
@@ -20,6 +20,8 @@ const isOpen = ref(false)
 const emits = defineEmits<{ // eslint-disable-line
   (e: 'language-selected', language: string): void
 }>()
+
+const store = useLanguageStore();
 
 const getImgUrl = (pet: string) => {
   return require('../../assets/icons/flags/'+ pet)
@@ -31,9 +33,11 @@ const onIconClick = () => {
 }
 
 const onLanguageSelected = (language: string) => {
-  console.log(language)
+
   emits('language-selected', language)
+  store.setLanguage(language)
 }
+
 // #endregion EVENTS
 
 
@@ -87,5 +91,18 @@ const onLanguageSelected = (language: string) => {
     .icon {
       filter: invert(0%) sepia(97%) saturate(3%) hue-rotate(320deg) brightness(102%) contrast(99%);
     }
+  }
+
+  @media screen and (max-width: 750px) {
+      .language-selector {
+        right: 5%;
+      }
+  }
+
+  @media screen and (max-width: 450px) {
+      .language-selector {
+        right: 1%;
+        zoom: 0.8;
+      }
   }
 </style>

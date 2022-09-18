@@ -1,0 +1,14 @@
+{
+  "en": {
+    "text": "If you want more information about my background, check my online CV here !",
+    "button": "Open CV"
+  },
+  "fr": {
+    "text": "Pour plus d'informations sur mon expérience, n'hésitez pas à consulter mon CV ci-dessous.",
+    "button": "Lire le CV"
+  },
+  "de": {
+    "text": "Wenn Sie mehr über meinen Hintergrund erfahren möchten, lesen Sie meinen Online-Lebenslauf hier!",
+    "button": "Lebenslauf lesen"
+  }
+}

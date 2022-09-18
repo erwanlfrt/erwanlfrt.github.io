@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import MenuBar from '@/components/menu-bar/MenuBar.vue'
+import { storeToRefs } from 'pinia';
+import { ref } from 'vue';
+import { useLanguageStore } from './store/LanguageStore';
 </script>
 <template>
   <menu-bar></menu-bar>

@@ -1,0 +1,76 @@
+{
+  "youtongue": {
+    "name": "YouTongue",
+    "logo": "youtongue.svg",
+    "background": "youtongue.png",
+    "description": {
+      "fr": "Rechercher des vidéos YouTube avec des sous-titres dans une ou plusieurs langues.",
+      "en": "Search for YouTube videos with subtitles in one or more languages.",
+      "de": "Suche nach YouTube-Videos mit Untertiteln in einer oder mehreren Sprachen."
+    },
+    "color": "#FF0000",
+    "url": "/youtongue",
+    "tags": [
+      {
+        "name": "TypeScript",
+        "color": "#0E7EAE"
+      },
+      {
+        "name": "React",
+        "color": "#4B4B4B"
+      }
+    ]
+  },
+  "boussole": {
+    "name": "Boussole",
+    "logo": "boussole.svg",
+    "background": "boussole.png",
+    "description": {
+      "fr": "Librairie JS/TS de navigation spatiale.",
+      "en": "JS/TS library for spatial navigation.",
+      "de": "JS/TS Bibliothek für räumliche Navigation."
+    },
+    "color": "#785e8a",
+    "url": "/boussole",
+    "tags": [
+      {
+        "name": "TypeScript",
+        "color": "#0E7EAE"
+      },
+      {
+        "name": "Vue",
+        "color": "#67bb84"
+      },
+      {
+        "name": "React",
+        "color": "#4B4B4B"
+      },
+      {
+        "name": "Angular",
+        "color": "#c7402a"
+      }
+    ]
+  },
+  "sweetch": {
+    "name": "Sweetch",
+    "logo": "sweetch.svg",
+    "background": "",
+    "description": {
+      "fr": "En développement :)",
+      "en": "Coming soon :)",
+      "de": "Demnächst verfügbar :)"
+    },
+    "color": "#000000",
+    "url": "/#",
+    "tags": [
+      {
+        "name": "Flutter",
+        "color": "#68c5ee"
+      },
+      {
+        "name": "Dart",
+        "color": "#1c2834"
+      }
+    ]
+  }
+}

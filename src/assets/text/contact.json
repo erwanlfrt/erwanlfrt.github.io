@@ -1,0 +1,17 @@
+{
+  "en": {
+    "beforePN": "If you want any information or if you want to contribute to one of my project, do not hesitate to contact me directly by phone at ",
+    "afterPN": ". You can also contact me by email at ",
+    "afterMA": "."
+  },
+  "fr": {
+    "beforePN": "Pour plus d'informations ou si vous souhaitez contribuer à l'un de mes projets, n'hésitez pas à me contacter directement par téléphone au ",
+    "afterPN": " ou alors par mail à l'adresse suivante : ",
+    "afterMA": "."
+  },
+  "de": {
+    "beforePN": "Für weitere Informationen oder wenn Sie zu einem meiner Projekte beitragen möchten, kontaktieren Sie mich bitte direkt per Telefon unter ",
+    "afterPN": " oder per E-Mail an ",
+    "afterMA": "."
+  }
+}
